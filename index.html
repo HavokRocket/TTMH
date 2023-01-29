@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTMH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div><img src="images/TTMH Logo.png" width="80px" height="80px"><h1>Tech Teens for Mental Health</h1><img src="images/TTMH Logo.png" width="80px" height="80px"></div>
+
+    <div class="set" id="one">
+        <div class="subset">
+            <h2>A Positive Quote For You</h2>
+            <p id="quote">When on the road to success, failure comes often. Celebrate it! Each failure is one step closer to success.</p>
+            <h3 id="writer">Anonymous</h3>
+
+            <script>
+                let quotes =
+                ["When on the road to success, failure comes often. Celebrate it! Each failure is one step closer to success.", 
+                "Life is like coding: you will never do it perfectly on the first try.",
+                "Sometimes, you just need to take a moment, and breathe.",
+                "It's never only about the destination. Enjoy the journey too!"]
+                let writers =
+                ["Anonymous",
+                "Anonymous",
+                "Steven Nguyen",
+                "Anonymous"]
+                var lastVal = 0;
+                function randomQuote(){
+                    var num = Math.floor(Math.random() * quotes.length)
+                    do{
+                        var num = Math.floor(Math.random() * quotes.length)
+                    }while(num==lastVal)
+
+                    document.getElementById("quote").innerHTML = quotes[num]
+                    document.getElementById("writer").innerHTML = writers[num]
+                    lastVal = num;
+                }
+
+                randomQuote()
+            </script>
+
+            <button id="b1"onclick="randomQuote()">Another Message?</button>
+        </div>
+    </div>
+
+    <div class="summary">
+        <div class="set" id="two">
+            <div class="subset">
+                <h2>Who Are We?</h2>
+                <p>We are Tech Teens for Mental Health! We seek to improve and advocate for mental health awareness through knowledge of technology, and code!</p>
+            </div>
+
+            <div class="subset">
+                <h2>What Do We Do?</h2>
+                <p>We involve coding and tech to advocate for mental health!<br>Our most recent project was a coding algorithm where we generated and printed letters of encouragement!</p>
+                <div id="images">
+                    <img src="images/letter.JPG" height="250px"width="250px">
+                    <p></p>
+                </div>
+
+                <div>
+                    <img src="images/letters.jpg" height="250px"width="250px">
+                </div>
+            </div>
+        </div>
+    
+        <div class="set" id="three">
+            <div class="subset">
+                <h2>Message Submission Form</h2>
+                <p>If you would like to submit a short positive affirmation for us to show, fill out the form below.</p>
+                <div>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeTQc2BLoFq6XZvgibLgRkaJZdkAp-XvgsVNdnd1XIodp0Thg/viewform?embedded=true" width="640" height="450" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </div>
+
+            <div class="subset">
+                <a href="https://www.instagram.com/techteensformentalhealth/" target="_blank" id="inst">Check out our Instagram!</a>
+                <p>We try to regularly post updates on the projects we've created, and will create!</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="set" id="four">
+            <h3>Contact Us!</h3>
+            <p>Erik Bermudez</p>
+            <p>unmillon16@gmail.com</p>
+            <a href="https://www.linkedin.com/in/erikbermudez18722/"target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>
